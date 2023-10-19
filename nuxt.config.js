@@ -4,15 +4,12 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
   // mode: "universal",
-  // target: "static",
+  target: "static",
   // ssr: false,
 
   // googleAnalytics: {
   //   id: "UA-10420085-1",
   // },
-  output: {
-    dir: 'public' 
-  },
   head: {
     title: '友照醫療儀器',
     htmlAttrs: {
