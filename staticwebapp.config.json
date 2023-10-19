@@ -1,5 +1,3 @@
 {
-    "appLocation": {
-        "nvmrcFile": ".nvmrc"
-      }
+    "app_artifact_location": "/bin/staticsites/.../app"
 }
