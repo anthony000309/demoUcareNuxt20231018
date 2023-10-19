@@ -10,7 +10,9 @@ export default {
   // googleAnalytics: {
   //   id: "UA-10420085-1",
   // },
-
+  output: {
+    dir: 'public' 
+  },
   head: {
     title: '友照醫療儀器',
     htmlAttrs: {
