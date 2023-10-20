@@ -10,6 +10,9 @@ export default {
   // googleAnalytics: {
   //   id: "UA-10420085-1",
   // },
+  generate: {
+    routes: ['/Products/Oxygen-Concentrator', '/Products/Pulse-Oximeter', '/Products/CPAP-BiPAP']
+  },
   head: {
     title: '友照醫療儀器',
     htmlAttrs: {
