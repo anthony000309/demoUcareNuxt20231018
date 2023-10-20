@@ -1,0 +1,20 @@
+{
+    "customHeaders": {
+      "/*": {
+        "x-custom-header": "value" 
+      }
+    },
+  
+    "routes": [
+      {
+        "route": "/_nuxt/**",
+        "allowedRoles": ["anonymous"]
+      }
+    ],
+  
+    "responseOverrides": {
+      "404": {
+        "redirect": "/index.html"
+      }
+    }
+  }
