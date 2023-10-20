@@ -7,10 +7,13 @@
   
     "routes": [
       {
-        "route": "/dist/*",
+        "route": "/_nuxt/*",
         "allowedRoles": ["anonymous"]
       }
-    ]
-  
-    
+    ],
+    "responseOverrides": {
+        "404": {
+          "redirect": "/"
+        }
+      }
   }
