@@ -11,7 +11,44 @@ export default {
   //   id: "UA-10420085-1",
   // },
   generate: {
-    routes: ['/Products/Oxygen-Concentrator', '/Products/Pulse-Oximeter', '/Products/CPAP-BiPAP']
+    routes(callback) {
+      axios
+        .all([
+          // 首頁
+          axios.get('https://www.ucare-medical.com/api/news?keyword=&newscat=&page='),
+          // blog 列表頁
+          axios.get('https://www.ucare-medical.com/api/product?keyword=&page='),
+          // blog 內容頁
+          axios.get('https://www.ucare-medical.com/api/event?keyword=&page='),
+          // blog 內容頁
+          axios.get('https://www.ucare-medical.com/api/ProductCategory'),
+        ])
+        .then(
+          axios.spread(function (NewsList, ProList, EventList, ProCatList) {
+            let GetNewCat = ['/News/bulletin', '/News/media', '/News/article']
+
+            let GetNews = NewsList.data.Data.map((data) => {
+              return '/News/Detail/' + data.newsid
+            })
+            let GetPros = ProList.data.Data.map((data) => {
+              return '/Products/Detail/' + data.proid
+            })
+            let GetEvents = EventList.data.Data.map((data) => {
+              return '/Cases/Detail/' + data.eventid
+            })
+
+            let GetProCat = ProCatList.data.Data.map((data) => {
+              return '/Products/' + data.eproCatName
+            })
+
+            // 用 concat 進行合併
+            callback(null, GetNewCat.concat(GetNews, GetPros, GetEvents, GetProCat))
+          }),
+          function (err) {
+            return next(err)
+          }
+        )
+    }
   },
   head: {
     title: '友照醫療儀器',
