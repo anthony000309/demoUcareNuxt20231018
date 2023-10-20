@@ -7,7 +7,7 @@
   
     "routes": [
       {
-        "route": "/_nuxt/**",
+        "route": "/_nuxt/*",
         "allowedRoles": ["anonymous"]
       }
     ],
