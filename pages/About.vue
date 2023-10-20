@@ -18,7 +18,7 @@
           <li class="breadcrumb-item breadcrumbs_font_upper">
             <nuxt-link to="/"> 首頁 </nuxt-link>
           </li>
-          <li class="breadcrumb-item active breadcrumbs_font_current" aria-current="page">關於我們123</li>
+          <li class="breadcrumb-item active breadcrumbs_font_current" aria-current="page">關於我們</li>
         </ol>
       </nav>
 
