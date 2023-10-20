@@ -38,7 +38,7 @@ jobs:
       - name: Start via PM2 
         run: pm2 start npm -- start
       - name: Restart PM2
-        run: pm2 restart all
+        run: pm2 reload all
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
