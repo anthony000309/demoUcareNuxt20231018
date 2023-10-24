@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default {
+module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
   // mode: "universal",
