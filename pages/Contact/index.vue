@@ -565,7 +565,7 @@
 
       resetValidcode() {
         const vm = this
-        vm.$axios.get('https://www.ucare-medical.com/api/validcode').then((response) => {
+        vm.$axios.get('https://demoucare20231012.azurewebsites.net/validcode').then((response) => {
           vm.getValidcode = response.data
           vm.getvalidsrc = vm.getValidcode.split('\\')[0]
           vm.getAudio = vm.getValidcode.split('\\')[1]
@@ -612,7 +612,7 @@
         }
 
         vm.$axios
-          .$post('https://www.ucare-medical.com/api/Inquire?proid=', AllData)
+          .$post('https://demoucare20231012.azurewebsites.net/Inquire?proid=', AllData)
           .then((response) => {
             if (response.Code == 200) {
               alert('已寄信給專員，待專員與您聯繫')
@@ -647,7 +647,7 @@
       let TodayDate = new Date()
       vm.getToday = `${TodayDate.getFullYear()}${TodayDate.getMonth() + 1}${TodayDate.getDate()}`
 
-      vm.$axios.get('https://www.ucare-medical.com/api/validcode').then((response) => {
+      vm.$axios.get('https://demoucare20231012.azurewebsites.net/validcode').then((response) => {
         vm.getValidcode = response.data
         vm.getvalidsrc = vm.getValidcode.split('\\')[0]
         vm.getAudio = vm.getValidcode.split('\\')[1]

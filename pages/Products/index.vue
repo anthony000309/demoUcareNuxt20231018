@@ -265,7 +265,7 @@
 
     async asyncData({ $axios, params }) {
       let currentPage = 1
-      let getPro = await $axios.get(`https://www.ucare-medical.com/api/product?keyword=&page=${currentPage}`)
+      let getPro = await $axios.get(`https://demoucare20231012.azurewebsites.net/product?keyword=&page=${currentPage}`)
 
       return {
         currentPage,
@@ -303,7 +303,7 @@
         vm.showpage = vm.ExhRawData[vm.tenPageNum]
       }
 
-      vm.$axios.get('https://www.ucare-medical.com/api/ProductCategory').then((response) => {
+      vm.$axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory').then((response) => {
         if (response.data.Code == 200) {
           vm.proCatList = response.data.Data
         } else if (response.data.Code == 404) {

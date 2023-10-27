@@ -885,7 +885,7 @@
 
       resetValidcode() {
         const vm = this
-        vm.$axios.get('https://www.ucare-medical.com/api/validcode').then((response) => {
+        vm.$axios.get('https://demoucare20231012.azurewebsites.net/validcode').then((response) => {
           vm.getValidcode = response.data
           vm.getvalidsrc = vm.getValidcode.split('\\')[0]
           vm.getAudio = vm.getValidcode.split('\\')[1]
@@ -932,7 +932,7 @@
         }
 
         vm.$axios
-          .$post(`https://www.ucare-medical.com/api/Inquire?proid=${vm.ProID}`, AllData)
+          .$post(`https://demoucare20231012.azurewebsites.net/Inquire?proid=${vm.ProID}`, AllData)
           .then((response) => {
             if (response.Code == 200) {
               alert('已寄信給專員，待專員與您聯繫')
@@ -1004,7 +1004,7 @@
     async asyncData({ $axios, params }) {
       const ProID = params.id
 
-      return await $axios.get(`https://www.ucare-medical.com/api/product/${ProID}`).then((res) => {
+      return await $axios.get(`https://demoucare20231012.azurewebsites.net/product/${ProID}`).then((res) => {
         let getList = {}
         getList = res.data.Data[0]
         return { ProData: getList, ProID }
@@ -1039,7 +1039,7 @@
 
       vm.lastPage = '/Products/'
 
-      vm.$axios.get('https://www.ucare-medical.com/api/validcode').then((response) => {
+      vm.$axios.get('https://demoucare20231012.azurewebsites.net/validcode').then((response) => {
         vm.getValidcode = response.data
         vm.getvalidsrc = vm.getValidcode.split('\\')[0]
         vm.getAudio = vm.getValidcode.split('\\')[1]
@@ -1072,7 +1072,7 @@
         vm.audio6 = `https://www.ucare-medical.com/uploads/numbers/${vm.getToday}/${video6}.mp3`
       })
 
-      vm.$axios.get('https://www.ucare-medical.com/api/ProductCategory').then((response) => {
+      vm.$axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory').then((response) => {
         if (response.data.Code == 200) {
           vm.proCatID = vm.ProData.productCatId
           vm.proCatList = response.data.Data

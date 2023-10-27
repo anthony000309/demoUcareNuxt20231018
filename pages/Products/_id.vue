@@ -302,7 +302,7 @@
 
       if (getCatName == 'index') {
         let getPro = await $axios.get(
-          `https://www.ucare-medical.com/api/product?keyword=&productCatId=&page=${currentPage}`
+          `https://demoucare20231012.azurewebsites.net/product?keyword=&productCatId=&page=${currentPage}`
         )
         return {
           currentPage,
@@ -312,7 +312,7 @@
         }
       } else if (getCatName == 'Oxygen-Concentrator') {
         let getPro = await $axios.get(
-          `https://www.ucare-medical.com/api/product?keyword=&productCatId=1&page=${currentPage}`
+          `https://demoucare20231012.azurewebsites.net/product?keyword=&productCatId=1&page=${currentPage}`
         )
         return {
           currentPage,
@@ -322,7 +322,7 @@
         }
       } else if (getCatName == 'Pulse-Oximeter') {
         let getPro = await $axios.get(
-          `https://www.ucare-medical.com/api/product?keyword=&productCatId=2&page=${currentPage}`
+          `https://demoucare20231012.azurewebsites.net/product?keyword=&productCatId=2&page=${currentPage}`
         )
         return {
           currentPage,
@@ -332,7 +332,7 @@
         }
       } else if (getCatName == 'CPAP-BiPAP') {
         let getPro = await $axios.get(
-          `https://www.ucare-medical.com/api/product?keyword=&productCatId=3&page=${currentPage}`
+          `https://demoucare20231012.azurewebsites.net/product?keyword=&productCatId=3&page=${currentPage}`
         )
         return {
           currentPage,
@@ -371,7 +371,7 @@
         vm.showpage = vm.ExhRawData[vm.tenPageNum]
       }
 
-      vm.$axios.get('https://www.ucare-medical.com/api/ProductCategory').then((response) => {
+      vm.$axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory').then((response) => {
         if (response.data.Code == 200) {
           vm.proCatList = response.data.Data
 
@@ -391,7 +391,7 @@
             let CatID = GetCatID[0].productCatId
 
             vm.$axios
-              .get(`https://www.ucare-medical.com/api/product?keyword=&productCatId=${CatID}&page=${vm.currentPage}`)
+              .get(`https://demoucare20231012.azurewebsites.net/product?keyword=&productCatId=${CatID}&page=${vm.currentPage}`)
               .then((response) => {
                 if (response.data.Code == 200) {
                   vm.ProList = response.data.Data

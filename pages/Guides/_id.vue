@@ -214,7 +214,7 @@
       if (route.query.page) {
         let currentPage = route.query.page
 
-        let getVideo = await $axios.get(`https://www.ucare-medical.com/api/video?keyword=&page=${currentPage}`)
+        let getVideo = await $axios.get(`https://demoucare20231012.azurewebsites.net/video?keyword=&page=${currentPage}`)
         return {
           currentPage,
           VideoList: getVideo.data.Data,
@@ -223,7 +223,7 @@
       } else {
         let currentPage = 1
 
-        let getVideo = await $axios.get(`https://www.ucare-medical.com/api/video?keyword=&page=1`)
+        let getVideo = await $axios.get(`https://demoucare20231012.azurewebsites.net/video?keyword=&page=1`)
 
         return {
           currentPage,

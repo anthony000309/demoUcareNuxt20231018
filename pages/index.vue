@@ -775,7 +775,7 @@
     },
 
     async asyncData({ $axios }) {
-      let getAllNews = await $axios.get(`https://www.ucare-medical.com/api/news?keyword=&newscat=&page=`)
+      let getAllNews = await $axios.get(`https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page=`)
 
       return {
         AllNewsList1: getAllNews.data.Data,

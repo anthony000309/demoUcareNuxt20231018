@@ -14,13 +14,13 @@ export default {
       axios
         .all([
           // 首頁
-          axios.get('https://www.ucare-medical.com/api/news?keyword=&newscat=&page='),
+          axios.get('https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page='),
           // blog 列表頁
-          axios.get('https://www.ucare-medical.com/api/product?keyword=&page='),
+          axios.get('https://demoucare20231012.azurewebsites.net/product?keyword=&page='),
           // blog 內容頁
-          axios.get('https://www.ucare-medical.com/api/event?keyword=&page='),
+          axios.get('https://demoucare20231012.azurewebsites.net/event?keyword=&page='),
           // blog 內容頁
-          axios.get('https://www.ucare-medical.com/api/ProductCategory'),
+          axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory'),
         ])
         .then(
           axios.spread(function (NewsList, ProList, EventList, ProCatList) {
@@ -188,7 +188,7 @@ export default {
 
   sitemap: {
     path: '/sitemap.xml', // sitemap名稱，不用改
-    hostname: 'https://www.ucare-medical.com/', // 網址
+    hostname: 'https://proud-water-01bf50400.4.azurestaticapps.net/', // 網址
     // cacheTime: 1000 * 60 * 15, // 站點路由更新頻率，只在 generate: false有用
     gzip: true, // 生成 .xml.gz 檔的 sitemap
     generate: false, // 允許使用 nuxt generate 生成
@@ -200,13 +200,13 @@ export default {
       axios
         .all([
           // 首頁
-          axios.get('https://www.ucare-medical.com/api/news?keyword=&newscat=&page='),
+          axios.get('https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page='),
           // blog 列表頁
-          axios.get('https://www.ucare-medical.com/api/product?keyword=&page='),
+          axios.get('https://demoucare20231012.azurewebsites.net/product?keyword=&page='),
           // blog 內容頁
-          axios.get('https://www.ucare-medical.com/api/event?keyword=&page='),
+          axios.get('https://demoucare20231012.azurewebsites.net/event?keyword=&page='),
           // blog 內容頁
-          axios.get('https://www.ucare-medical.com/api/ProductCategory'),
+          axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory'),
         ])
         .then(
           axios.spread(function (NewsList, ProList, EventList, ProCatList) {
