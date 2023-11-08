@@ -8,7 +8,7 @@
         </span>
       </div>
       <img src="../assets/images/top_about.jpg" class="topBannerHeight" width="100%" alt="友照醫療-背景圖" />
-      <h1 class="TopBanner_Cn container">關於我們123</h1>
+      <h1 class="TopBanner_Cn container">關於我們</h1>
     </div>
 
     <div class="container">
@@ -18,7 +18,7 @@
           <li class="breadcrumb-item breadcrumbs_font_upper">
             <nuxt-link to="/"> 首頁 </nuxt-link>
           </li>
-          <li class="breadcrumb-item active breadcrumbs_font_current" aria-current="page">關於我們</li>
+          <li class="breadcrumb-item active breadcrumbs_font_current" aria-current="page">關於我們123</li>
         </ol>
       </nav>
 
