@@ -4,7 +4,7 @@ module.exports = {
 
   mode: "universal",
   // target: "static",
-  // ssr: true,
+  ssr: true,
 
   // googleAnalytics: {
   //   id: "UA-10420085-1",
