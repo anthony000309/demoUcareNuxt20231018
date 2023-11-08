@@ -1,5 +1,5 @@
-import axios from 'axios'
-export default {
+const axios = require('axios');
+module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
   // mode: "universal",
