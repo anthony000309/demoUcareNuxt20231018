@@ -2,7 +2,7 @@ const axios = require('axios');
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
-  // mode: "universal",
+  mode: "universal",
   // target: "static",
   // ssr: false,
 
