@@ -398,7 +398,7 @@
       }
 
       if (getCatName == 'index') {
-        let getNews = await $axios.get(`https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page=${currentPage}`)
+        let getNews = await $axios.get(`https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=&page=${currentPage}`)
         return {
           currentPage,
           NewsList: getNews.data.Data,
@@ -407,7 +407,7 @@
         }
       } else if (getCatName == 'bulletin') {
         let getNews = await $axios.get(
-          `https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=topnews&page=${currentPage}`
+          `https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=topnews&page=${currentPage}`
         )
         return {
           currentPage,
@@ -417,7 +417,7 @@
         }
       } else if (getCatName == 'media') {
         let getNews = await $axios.get(
-          `https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=media&page=${currentPage}`
+          `https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=media&page=${currentPage}`
         )
         return {
           currentPage,
@@ -427,7 +427,7 @@
         }
       } else if (getCatName == 'article') {
         let getNews = await $axios.get(
-          `https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=column&page=${currentPage}`
+          `https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=column&page=${currentPage}`
         )
         return {
           currentPage,

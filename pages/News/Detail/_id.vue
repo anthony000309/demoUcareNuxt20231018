@@ -154,7 +154,7 @@
     async asyncData({ $axios, params }) {
       const NewsID = params.id
 
-      return await $axios.get(`https://demoucare20231012.azurewebsites.net/news/${NewsID}`).then((res) => {
+      return await $axios.get(`https://ucarebackend20231109.azurewebsites.net/news/${NewsID}`).then((res) => {
         let getNews = {}
         getNews = res.data.Data[0]
         return { NewsInfo: getNews, NewsID }

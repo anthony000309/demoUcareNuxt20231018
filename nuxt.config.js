@@ -2,7 +2,7 @@ const axios = require('axios');
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
-  mode: "universal",
+  // mode: "universal",
   // target: "static",
   ssr: true,
 
@@ -14,13 +14,13 @@ module.exports = {
       axios
         .all([
           // 首頁
-          axios.get('https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page='),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=&page='),
           // blog 列表頁
-          axios.get('https://demoucare20231012.azurewebsites.net/product?keyword=&page='),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/product?keyword=&page='),
           // blog 內容頁
-          axios.get('https://demoucare20231012.azurewebsites.net/event?keyword=&page='),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/event?keyword=&page='),
           // blog 內容頁
-          axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory'),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/ProductCategory'),
         ])
         .then(
           axios.spread(function (NewsList, ProList, EventList, ProCatList) {
@@ -200,13 +200,13 @@ module.exports = {
       axios
         .all([
           // 首頁
-          axios.get('https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page='),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=&page='),
           // blog 列表頁
-          axios.get('https://demoucare20231012.azurewebsites.net/product?keyword=&page='),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/product?keyword=&page='),
           // blog 內容頁
-          axios.get('https://demoucare20231012.azurewebsites.net/event?keyword=&page='),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/event?keyword=&page='),
           // blog 內容頁
-          axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory'),
+          axios.get('https://ucarebackend20231109.azurewebsites.net/ProductCategory'),
         ])
         .then(
           axios.spread(function (NewsList, ProList, EventList, ProCatList) {

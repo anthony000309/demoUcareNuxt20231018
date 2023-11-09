@@ -775,7 +775,7 @@
     },
 
     async asyncData({ $axios }) {
-      let getAllNews = await $axios.get(`https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page=`)
+      let getAllNews = await $axios.get(`https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=&page=`)
 
       return {
         AllNewsList1: getAllNews.data.Data,

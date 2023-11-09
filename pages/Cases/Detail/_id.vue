@@ -174,7 +174,7 @@
           vm.currentPage = vm.currentPage + 1
 
           vm.$axios
-            .get(`https://demoucare20231012.azurewebsites.net/eventphoto/${vm.EventID}?page=${vm.currentPage}`)
+            .get(`https://ucarebackend20231109.azurewebsites.net/eventphoto/${vm.EventID}?page=${vm.currentPage}`)
             .then((response) => {
               if (response.data.Code == '200') {
                 let getNewExhPhoto = []
@@ -198,7 +198,7 @@
     async asyncData({ $axios, params }) {
       const EventID = params.id
 
-      return await $axios.get(`https://demoucare20231012.azurewebsites.net/event/${EventID}`).then((res) => {
+      return await $axios.get(`https://ucarebackend20231109.azurewebsites.net/event/${EventID}`).then((res) => {
         let getList = {}
         getList = res.data.Data[0]
         return { EventData: getList, EventID }
@@ -220,7 +220,7 @@
 
       vm.getAdviceExh = vm.EventData.otherEventList
 
-      vm.$axios.get(`https://demoucare20231012.azurewebsites.net/eventphoto/${vm.EventID}?page=1`).then((response) => {
+      vm.$axios.get(`https://ucarebackend20231109.azurewebsites.net/eventphoto/${vm.EventID}?page=1`).then((response) => {
         if (response.data.Code == '200') {
           vm.ShowtotalNum = response.data.Datatotal
 

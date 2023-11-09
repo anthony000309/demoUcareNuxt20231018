@@ -89,7 +89,7 @@
             tabindex="0"
           >
             <span class="bg-white">
-              <span class="Imgtag" v-if="item.rent == 1">可出租</span>
+              <span class="Imgtag" v-if="item.rent == 0">可出租</span>
 
               <div class="logImgFrame mt-2">
                 <img :src="`${item.proImg}`" width="85%" alt="產品圖" />
@@ -265,7 +265,7 @@
 
     async asyncData({ $axios, params }) {
       let currentPage = 1
-      let getPro = await $axios.get(`https://demoucare20231012.azurewebsites.net/product?keyword=&page=${currentPage}`)
+      let getPro = await $axios.get(`https://ucarebackend20231109.azurewebsites.net/product?keyword=&page=${currentPage}`)
 
       return {
         currentPage,
@@ -303,7 +303,7 @@
         vm.showpage = vm.ExhRawData[vm.tenPageNum]
       }
 
-      vm.$axios.get('https://demoucare20231012.azurewebsites.net/ProductCategory').then((response) => {
+      vm.$axios.get('https://ucarebackend20231109.azurewebsites.net/ProductCategory').then((response) => {
         if (response.data.Code == 200) {
           vm.proCatList = response.data.Data
         } else if (response.data.Code == 404) {

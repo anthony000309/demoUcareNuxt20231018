@@ -371,7 +371,7 @@
       let currentPage = 1
       let GetnewsTopic = 1
 
-      let getAllNews = await $axios.get(`https://demoucare20231012.azurewebsites.net/news?keyword=&newscat=&page=${currentPage}`)
+      let getAllNews = await $axios.get(`https://ucarebackend20231109.azurewebsites.net/news?keyword=&newscat=&page=${currentPage}`)
 
       return {
         currentPage,

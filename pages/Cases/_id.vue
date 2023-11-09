@@ -222,7 +222,7 @@
       if (route.query.page) {
         let currentPage = route.query.page
 
-        let getEvent = await $axios.get(`https://demoucare20231012.azurewebsites.net/event?keyword=&page=${currentPage}`)
+        let getEvent = await $axios.get(`https://ucarebackend20231109.azurewebsites.net/event?keyword=&page=${currentPage}`)
 
         return {
           currentPage,
@@ -232,7 +232,7 @@
       } else {
         let currentPage = 1
 
-        let getEvent = await $axios.get(`https://demoucare20231012.azurewebsites.net/event?keyword=&page=${currentPage}`)
+        let getEvent = await $axios.get(`https://ucarebackend20231109.azurewebsites.net/event?keyword=&page=${currentPage}`)
 
         return {
           currentPage,
