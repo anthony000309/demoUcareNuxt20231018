@@ -39,6 +39,8 @@ app.use(nuxt.render)
 app.listen(port, host)
 console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
 
+module.exports = app;
+
 // const router = require('express').Router();
 
 // module.exports = {

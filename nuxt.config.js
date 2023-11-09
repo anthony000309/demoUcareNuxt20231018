@@ -5,7 +5,7 @@ module.exports = {
   // mode: "universal",
   // target: "static",
   ssr: true,
-
+  serverMiddleware:['~/server/index'],
   // googleAnalytics: {
   //   id: "UA-10420085-1",
   // },
