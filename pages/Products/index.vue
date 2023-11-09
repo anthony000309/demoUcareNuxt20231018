@@ -89,7 +89,7 @@
             tabindex="0"
           >
             <span class="bg-white">
-              <span class="Imgtag" v-if="item.rent == 1">可出租</span>
+              <span class="Imgtag" v-if="item.rent == 0">可出租123</span>
 
               <div class="logImgFrame mt-2">
                 <img :src="`${item.proImg}`" width="85%" alt="產品圖" />
